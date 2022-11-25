@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +10,11 @@ export class HeaderComponent implements OnInit {
   //@Output() LoadFeature: EventEmitter<any> = new EventEmitter<string>();
 
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
+
 
   // onSelect(feature:string){
   //   this.LoadFeature.emit(feature);
